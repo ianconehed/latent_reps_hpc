@@ -1,5 +1,7 @@
-Run "splitters_action_weight_dep_beta.m" to run the simulation
+This code is for the model in "Latent Representations in Hippocampal Network Model Co-Evolve with Behavioral Exploration of Task Structure".
 
-In the process of cleaning up the code
+"plateau_splitters_code.m" includes the main code for the simulations - a running the program will run a demo simulation and plot relevant figures afterwards. Comments are included in the file for further instruction.
 
-For any questions email i.cone@imperial.ac.uk
+"param_init2.m" includes the parameters for use in the main file.
+
+This code was written and run in MATLAB 2021a. Please direct any questions to ianconehed(at)gmail(dot)com.
