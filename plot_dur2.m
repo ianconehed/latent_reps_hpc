@@ -1,16 +1,21 @@
 if l == 1
     figure('Position', [300 100 1200 800]);
-elseif mod(l,20) == 0
+elseif mod(l,200) == 0 %&&l>2000
     subplot(3,3,1)
-    imagesc(pos_map)
-    title('x_{l}')
+    imagesc(u_k)
+    title('u_{k}')
     ylabel('input neuron #')
     xlabel('time')
     colorbar
     subplot(3,3,2)
-    imagesc(a_policy)
-    title('a_{policy}')
-    ylabel('presynaptic neuron')
+%     imagesc(M_ik')
+%     title('M_ik')
+%     ylabel('presynaptic neuron')
+%     xlabel('postsynaptic neuron')
+%     colorbar
+    imagesc(a_fun)
+    title('a_{fun}')
+    ylabel('i')
     xlabel('time')
     colorbar
     subplot(3,3,3)
@@ -20,14 +25,14 @@ elseif mod(l,20) == 0
     xlabel('postsynaptic neuron')
     colorbar
     subplot(3,3,4)
-    imagesc(z_i)
-    title('z_{i}')
+    imagesc(s_i)
+    title('s_{i}')
     ylabel('conj. neuron #')
     xlabel('time')
     colorbar
     subplot(3,3,5)
-    imagesc(y_i)
-    title('y_{i}')
+    imagesc(a_i)
+    title('a_{i}')
     ylabel('i')
     xlabel('time')
     colorbar
@@ -38,23 +43,24 @@ elseif mod(l,20) == 0
     xlabel('time')
     colorbar
     subplot(3,3,7)
-    imagesc(Q_ij)
-    title('Q_ij')
+    imagesc(Q_li)
+    title('Q_li')
     ylabel('presynaptic neuron')
     xlabel('postsynaptic neuron')
     colorbar
     subplot(3,3,8)
-    plot(beta)
-    title('beta_{i}')
-    ylabel('beta')
-    xlabel('i')
-    ylim([0 1])
+    imagesc(v_policy)
+    title('v_{policy}')
+    ylabel('i')
+    xlabel('time')
+%     ylim([0 1])
     colorbar
     subplot(3,3,9)
-    imagesc(a_i)
-    title('a_{i}')
+    imagesc(v_l)
+    title('v_{l}')
     ylabel('i')
     xlabel('time')
     colorbar
     drawnow
+    disp(l)
 end
